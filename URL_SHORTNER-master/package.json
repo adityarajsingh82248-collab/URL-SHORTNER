@@ -1,0 +1,17 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "private": true,
+  "description": "URL Shortener application with React frontend and Node.js Express backend",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run dev --prefix BACKEND\" \"npm run dev --prefix FRONTEND\"",
+    "start": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm start --prefix BACKEND\" \"npm run dev --prefix FRONTEND\"",
+    "dev:backend": "npm run dev --prefix BACKEND",
+    "dev:frontend": "npm run dev --prefix FRONTEND",
+    "build:frontend": "npm run build --prefix FRONTEND",
+    "install:all": "npm install && npm install --prefix BACKEND && npm install --prefix FRONTEND"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
